@@ -11,10 +11,10 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activities.ForgotPaswordActivity"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".activities.SingUpActivity"
-            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".activities.SingUpActivity" />
         <activity
             android:name=".activities.LoginActivity"
+            android:theme="@style/NoPreview"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".MainActivity">
             <intent-filter>

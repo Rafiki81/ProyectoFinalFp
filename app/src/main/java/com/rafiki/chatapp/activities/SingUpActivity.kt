@@ -6,6 +6,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.rafiki.chatapp.R
+import com.rafiki.chatapp.goToActivity
+import com.rafiki.chatapp.toast
 import kotlinx.android.synthetic.main.activity_sing_up.*
 
 
@@ -18,6 +20,9 @@ class SingUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sing_up)
 
         buttonGoLogIn.setOnClickListener{
+            goToActivity<LoginActivity>{
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
             val intent = Intent(this, LoginActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
@@ -32,7 +37,7 @@ class SingUpActivity : AppCompatActivity() {
             if(isValidEmailAndPassword(email,password)){
                 singUpByEmail(email,password)
             }else{
-                Toast.makeText(this, "Please Fill all the data and confirm password is correct", Toast.LENGTH_LONG).show()
+                toast("Please Fill all the data and confirm password is correct")
             }
 
         }
@@ -40,11 +45,11 @@ class SingUpActivity : AppCompatActivity() {
 
         val currentUser = mAuth.currentUser
         if (currentUser == null) {
-            Toast.makeText(this, "User is NOT logged IN", Toast.LENGTH_LONG).show()
+            toast("User is NOT logged IN")
             //createAccount("rperezbeato@gmail.com", "123456")
         } else {
 
-            Toast.makeText(this, "User IS logged IN", Toast.LENGTH_LONG).show()
+            toast( "User IS logged IN")
         }
         //updateUI(currentUser)
 
