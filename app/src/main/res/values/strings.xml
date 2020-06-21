@@ -3,15 +3,15 @@
 
     <!--    LoginView-->
     <string name="login_email">ChatApp</string>
-    <string name="login_password">ChatApp</string>
-    <string name="login_confirm_password">ChatApp</string>
-    <string name="login_sing_in">ChatApp</string>
-    <string name="login_sing_up">ChatApp</string>
-    <string name="login_reset_password">ChatApp</string>
-    <string name="login_sing_in_google">ChatApp</string>
-    <string name="login_forgot_password">ChatApp</string>
-    <string name="login_create_account">ChatApp</string>
-    <string name="login_go_login">ChatApp</string>
+    <string name="login_password">Password</string>
+    <string name="login_confirm_password">Confirm Password</string>
+    <string name="login_sing_in">SING IN</string>
+    <string name="login_sing_up">SING UP</string>
+    <string name="login_reset_password">RESET PASSWORD</string>
+    <string name="login_sing_in_google">SING IN WITH GOOGLE</string>
+    <string name="login_forgot_password">FORGOT MY PASSWORD</string>
+    <string name="login_create_account">CREATE ACCOUNT</string>
+    <string name="login_go_login">LOGIN</string>
 
 
 </resources>
