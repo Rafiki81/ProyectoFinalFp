@@ -77,6 +77,12 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
     private fun logInByGoogleAccountIntoFireBase(googleAccount: GoogleSignInAccount ){
         val credential = GoogleAuthProvider.getCredential(googleAccount.idToken,null)
         mAuth.signInWithCredential(credential).addOnCompleteListener(this){
+            if(mGoogleApiClient.isConnected){
+                Auth.GoogleSignInApi.signOut(mGoogleApiClient)
+            }
+            goToActivity<MainActivity>{
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
             toast("Sign In By Google")
         }
     }
