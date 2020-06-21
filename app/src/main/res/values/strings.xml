@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ChatApp</string>
+
+    <!--    LoginView-->
+    <string name="login_email">ChatApp</string>
+    <string name="login_password">ChatApp</string>
+    <string name="login_confirm_password">ChatApp</string>
+    <string name="login_sing_in">ChatApp</string>
+    <string name="login_sing_up">ChatApp</string>
+    <string name="login_reset_password">ChatApp</string>
+    <string name="login_sing_in_google">ChatApp</string>
+    <string name="login_forgot_password">ChatApp</string>
+    <string name="login_create_account">ChatApp</string>
+    <string name="login_go_login">ChatApp</string>
+
+
+</resources>

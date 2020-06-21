@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "118794508763",
+    "firebase_url": "https://apppractica-ee9b0.firebaseio.com",
+    "project_id": "apppractica-ee9b0",
+    "storage_bucket": "apppractica-ee9b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118794508763:android:a7248282b3ed4a077aaffe",
+        "android_client_info": {
+          "package_name": "com.rafiki.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118794508763-3dh6iel4omspdr32occucqctla3q5g0d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdKO9_eGYE9-E6Atax8E2qWstM7ae2AKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "118794508763-3dh6iel4omspdr32occucqctla3q5g0d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
