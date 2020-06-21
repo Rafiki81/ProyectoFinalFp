@@ -2,7 +2,6 @@ package com.rafiki.chatapp.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.rafiki.chatapp.R
@@ -44,7 +43,7 @@ class SingUpActivity : AppCompatActivity() {
 
 
         val currentUser = mAuth.currentUser
-        if (currentUser == null) {
+        if (currentUser === null) {
             toast("User is NOT logged IN")
             //createAccount("rperezbeato@gmail.com", "123456")
         } else {
@@ -56,13 +55,12 @@ class SingUpActivity : AppCompatActivity() {
     }
 
     private fun singUpByEmail(email: String, password: String) {
-        mAuth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(this, "An Email has been Sent to You, please confirm before Sign In", Toast.LENGTH_LONG).show()
+                   toast("An Email has been Sent to You, please confirm before Sign In")
                     val user = mAuth.currentUser
                 } else {
-                    Toast.makeText(this, "An Unexpected Error Occurred, please Try Again", Toast.LENGTH_LONG).show()
+                    toast("An Unexpected Error Occurred, please Try Again")
                 }
             }
     }

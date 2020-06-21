@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">ChatApp</string>
+    <string name="app_name">ChatAAP</string>
 
     <!--    LoginView-->
-    <string name="login_email">ChatApp</string>
+    <string name="login_email">Email</string>
     <string name="login_password">Password</string>
     <string name="login_confirm_password">Confirm Password</string>
     <string name="login_sing_in">SING IN</string>
