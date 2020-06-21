@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "118794508763",
-    "firebase_url": "https://apppractica-ee9b0.firebaseio.com",
-    "project_id": "apppractica-ee9b0",
-    "storage_bucket": "apppractica-ee9b0.appspot.com"
+    "project_number": "57995281858",
+    "firebase_url": "https://chatapp-7f66e.firebaseio.com",
+    "project_id": "chatapp-7f66e",
+    "storage_bucket": "chatapp-7f66e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:118794508763:android:a7248282b3ed4a077aaffe",
+        "mobilesdk_app_id": "1:57995281858:android:8e1ac10d57dc8bb124c25b",
         "android_client_info": {
           "package_name": "com.rafiki.chatapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "118794508763-3dh6iel4omspdr32occucqctla3q5g0d.apps.googleusercontent.com",
+          "client_id": "57995281858-4fddhl7ak6dopmg2k6bh71gpmtnrj64a.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDdKO9_eGYE9-E6Atax8E2qWstM7ae2AKQ"
+          "current_key": "AIzaSyCqfrt56P2nZ_3boDaxO5VqcKqhlijo4vk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "118794508763-3dh6iel4omspdr32occucqctla3q5g0d.apps.googleusercontent.com",
+              "client_id": "57995281858-4fddhl7ak6dopmg2k6bh71gpmtnrj64a.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

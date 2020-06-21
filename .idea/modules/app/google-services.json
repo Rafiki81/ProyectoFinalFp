@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "57995281858-b2dnbjvtc1jkcbd7l8fh9o88oq8qfsr5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rafiki.chatapp",
+            "certificate_hash": "13b5f3cb2b54c0b5e729f96eb02d988ebdb1f8a7"
+          }
+        },
+        {
           "client_id": "57995281858-mvd09gfhl6jsi5hmja4oe293n58noa9h.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

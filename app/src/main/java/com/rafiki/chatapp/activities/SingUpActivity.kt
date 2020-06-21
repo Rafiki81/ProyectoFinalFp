@@ -4,10 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.rafiki.chatapp.R
-import com.rafiki.chatapp.goToActivity
-import com.rafiki.chatapp.toast
+import com.rafiki.chatapp.*
 import kotlinx.android.synthetic.main.activity_sing_up.*
+
 
 
 class SingUpActivity : AppCompatActivity() {
@@ -32,25 +31,27 @@ class SingUpActivity : AppCompatActivity() {
 
             val email = editText_email.text.toString()
             val password = editText_password.text.toString()
-
-            if(isValidEmailAndPassword(email,password)){
+            val confirmPassword = editText_confirmPassword.text.toString()
+            if(isValidEmail(email) && isValidPassword(password) && isValidConfirmPassword(password,confirmPassword)){
                 singUpByEmail(email,password)
-            }else{
+            }else {
                 toast("Please Fill all the data and confirm password is correct")
             }
 
         }
 
-
-        val currentUser = mAuth.currentUser
-        if (currentUser === null) {
-            toast("User is NOT logged IN")
-            //createAccount("rperezbeato@gmail.com", "123456")
-        } else {
-
-            toast( "User IS logged IN")
+        editText_email.validate {
+            editText_email.error = if (isValidEmail(it)) null else "Email is not valid"
         }
-        //updateUI(currentUser)
+
+        editText_password.validate {
+            editText_password.error = if (isValidPassword(it)) null else "Password should contain 1 number, 1 lowercase, 1 uppercase, 1 special character and 4 characters at least"
+        }
+
+        editText_confirmPassword.validate {
+            editText_confirmPassword.error = if (isValidConfirmPassword(editText_password.text.toString(),it)) null else "Confirm password does not match Password"
+        }
+
 
     }
 
@@ -58,16 +59,10 @@ class SingUpActivity : AppCompatActivity() {
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                    toast("An Email has been Sent to You, please confirm before Sign In")
-                    val user = mAuth.currentUser
                 } else {
                     toast("An Unexpected Error Occurred, please Try Again")
                 }
             }
     }
 
-    private fun isValidEmailAndPassword(email: String, password: String): Boolean {
-
-        return !email.isNullOrEmpty() && !password.isNullOrEmpty() && password == editText_confirmPassword.text.toString()
-
-    }
 }
