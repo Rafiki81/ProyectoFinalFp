@@ -58,7 +58,13 @@ class SingUpActivity : AppCompatActivity() {
     private fun singUpByEmail(email: String, password: String) {
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                   toast("An Email has been Sent to You, please confirm before Sign In")
+                    mAuth.currentUser!!.sendEmailVerification().addOnCompleteListener(this){
+                        toast("An Email has been Sent to You, please confirm before Sign In")
+                        goToActivity<LoginActivity> {
+                            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        }
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                    }
                 } else {
                     toast("An Unexpected Error Occurred, please Try Again")
                 }
